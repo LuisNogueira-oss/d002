@@ -7,20 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1><strong>Trabalhando com números aleatórios</strong></h1>
-        <p>Gerando um número aleatório entre 0 e 100...</p>
-        
-        <p>O valor gerado foi<strong>
-        <?php
-        // Gerando um número aleatório entre 0 e 100
-        $numero = mt_rand(0, 100);
-        // Exibindo o número gerado
-        echo $numero;
+    <main>
+        <h1>Trabalhando com numeros aleatrorios</h1>
+        <?php 
+        $min = 0;
+        $max = 100;
+        $num = mt_rand($min, $max);
+        echo "<p>O número aleatório gerado entre $min e $max... <br>O valor gerado foi <strong> $num </strong> </p>";
         ?>
-        </strong></p>
-        
-        <a href="index.php" class="button">🔄 Gerar outro</a>
-    </div>
+        <button onclick="javascript:document.location.reload()">&#x1F504; De novo</button>
+    </main>
 </body>
 </html>
